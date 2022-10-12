@@ -1,0 +1,7 @@
+datasources:b072370cdc7e686b5ee2f9a880c477179afe817a
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:d055c5b3c430e3c6a1fea876a99f1d00d6c73ce5
+--suite Suites.TC1 LoginPage
+--suite Suites.TC2 AddProductPage
+--suite Suites.TC3 productOrder

@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221012 15:16:30.714" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\AnkitKumar\PycharmProjects\SauceDemoRobotFramework\TestCases">
+<suite id="s1-s1" name="TC1 LoginPage" source="C:\Users\AnkitKumar\PycharmProjects\SauceDemoRobotFramework\TestCases\TC1_LoginPage.robot">
+<test id="s1-s1-t1" name="Login in the website" line="11">
+<kw name="Open my Browser" library="CommonPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221012 15:16:31.113" level="INFO">Opening browser 'headlessChrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221012 15:16:31.112" endtime="20221012 15:16:32.936"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221012 15:16:32.937" endtime="20221012 15:16:33.053"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:31.112" endtime="20221012 15:16:33.054"/>
+</kw>
+<kw name="Enter Login Credentials and verfiy the page" library="LoginPage">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221012 15:16:33.056" endtime="20221012 15:16:33.057"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:33.058" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<status status="PASS" starttime="20221012 15:16:33.057" endtime="20221012 15:16:33.180"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:33.182" level="INFO">Typing password into text field '//input[@placeholder='Password']'.</msg>
+<msg timestamp="20221012 15:16:33.216" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221012 15:16:33.261" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221012 15:16:33.181" endtime="20221012 15:16:33.261"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:33.263" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20221012 15:16:33.262" endtime="20221012 15:16:33.348"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sauce Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:16:33.372" level="INFO">Current page contains text 'Sauce Labs'.</msg>
+<status status="PASS" starttime="20221012 15:16:33.350" endtime="20221012 15:16:33.372"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:33.055" endtime="20221012 15:16:33.373"/>
+</kw>
+<kw name="Logout from the website" library="LogoutPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_menu}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:33.376" level="INFO">Clicking button '//button[@id='react-burger-menu-btn']'.</msg>
+<status status="PASS" starttime="20221012 15:16:33.375" endtime="20221012 15:16:33.430"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:33.432" level="INFO">Clicking link 'Logout'.</msg>
+<status status="PASS" starttime="20221012 15:16:33.431" endtime="20221012 15:16:33.531"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:33.374" endtime="20221012 15:16:33.533"/>
+</kw>
+<kw name="Close My Browser" library="CommonPage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221012 15:16:33.534" endtime="20221012 15:16:35.617"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:33.534" endtime="20221012 15:16:35.618"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:31.109" endtime="20221012 15:16:35.618"/>
+</test>
+<status status="PASS" starttime="20221012 15:16:30.835" endtime="20221012 15:16:35.629"/>
+</suite>
+<suite id="s1-s2" name="TC2 AddProductPage" source="C:\Users\AnkitKumar\PycharmProjects\SauceDemoRobotFramework\TestCases\TC2_AddProductPage.robot">
+<test id="s1-s2-t1" name="Add Product to Cart" line="12">
+<kw name="Open my Browser" library="CommonPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221012 15:16:35.659" level="INFO">Opening browser 'headlessChrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221012 15:16:35.658" endtime="20221012 15:16:37.336"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221012 15:16:37.337" endtime="20221012 15:16:37.456"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:35.657" endtime="20221012 15:16:37.456"/>
+</kw>
+<kw name="Enter Login Credentials and verfiy the page" library="LoginPage">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221012 15:16:37.457" endtime="20221012 15:16:37.459"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:37.460" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<status status="PASS" starttime="20221012 15:16:37.459" endtime="20221012 15:16:37.565"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:37.568" level="INFO">Typing password into text field '//input[@placeholder='Password']'.</msg>
+<msg timestamp="20221012 15:16:37.603" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221012 15:16:37.652" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221012 15:16:37.567" endtime="20221012 15:16:37.652"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:37.654" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20221012 15:16:37.653" endtime="20221012 15:16:37.745"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sauce Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:16:37.764" level="INFO">Current page contains text 'Sauce Labs'.</msg>
+<status status="PASS" starttime="20221012 15:16:37.747" endtime="20221012 15:16:37.764"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:37.457" endtime="20221012 15:16:37.766"/>
+</kw>
+<kw name="Add product to the cart" library="AddProductPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${btn_addtocart}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221012 15:16:37.782" level="INFO">${count} = 6</msg>
+<status status="PASS" starttime="20221012 15:16:37.768" endtime="20221012 15:16:37.782"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:16:37.783" endtime="20221012 15:16:37.785"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${count}+1</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:16:37.786" endtime="20221012 15:16:37.787"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_addtocart} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:37.788" level="INFO">Clicking element '(//div[@class='inventory_item_name']) [1]'.</msg>
+<status status="PASS" starttime="20221012 15:16:37.787" endtime="20221012 15:16:37.849"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${addToCartLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:37.851" level="INFO">Clicking button '//button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20221012 15:16:37.851" endtime="20221012 15:16:37.916"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${backToProducts}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:37.918" level="INFO">Clicking button '//button[@id='back-to-products']'.</msg>
+<status status="PASS" starttime="20221012 15:16:37.917" endtime="20221012 15:16:38.082"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:37.786" endtime="20221012 15:16:38.083"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:16:38.084" endtime="20221012 15:16:38.085"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_addtocart} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.086" level="INFO">Clicking element '(//div[@class='inventory_item_name']) [2]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.086" endtime="20221012 15:16:38.199"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${addToCartLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.201" level="INFO">Clicking button '//button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.200" endtime="20221012 15:16:38.263"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${backToProducts}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.264" level="INFO">Clicking button '//button[@id='back-to-products']'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.264" endtime="20221012 15:16:38.325"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:38.084" endtime="20221012 15:16:38.326"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:16:38.327" endtime="20221012 15:16:38.328"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_addtocart} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.329" level="INFO">Clicking element '(//div[@class='inventory_item_name']) [3]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.328" endtime="20221012 15:16:38.424"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${addToCartLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.426" level="INFO">Clicking button '//button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.425" endtime="20221012 15:16:38.482"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${backToProducts}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.484" level="INFO">Clicking button '//button[@id='back-to-products']'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.483" endtime="20221012 15:16:38.541"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:38.327" endtime="20221012 15:16:38.543"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:16:38.544" endtime="20221012 15:16:38.545"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_addtocart} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.546" level="INFO">Clicking element '(//div[@class='inventory_item_name']) [4]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.545" endtime="20221012 15:16:38.589"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${addToCartLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.592" level="INFO">Clicking button '//button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.591" endtime="20221012 15:16:38.671"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${backToProducts}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.673" level="INFO">Clicking button '//button[@id='back-to-products']'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.672" endtime="20221012 15:16:38.730"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:38.544" endtime="20221012 15:16:38.732"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:16:38.733" endtime="20221012 15:16:38.733"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_addtocart} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.734" level="INFO">Clicking element '(//div[@class='inventory_item_name']) [5]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.734" endtime="20221012 15:16:38.777"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${addToCartLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.780" level="INFO">Clicking button '//button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.779" endtime="20221012 15:16:38.829"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${backToProducts}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.831" level="INFO">Clicking button '//button[@id='back-to-products']'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.830" endtime="20221012 15:16:38.887"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:38.732" endtime="20221012 15:16:38.889"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:16:38.890" endtime="20221012 15:16:38.890"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_addtocart} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.891" level="INFO">Clicking element '(//div[@class='inventory_item_name']) [6]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.891" endtime="20221012 15:16:38.937"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${addToCartLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.939" level="INFO">Clicking button '//button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.938" endtime="20221012 15:16:38.992"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${backToProducts}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:38.993" level="INFO">Clicking button '//button[@id='back-to-products']'.</msg>
+<status status="PASS" starttime="20221012 15:16:38.993" endtime="20221012 15:16:39.047"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:38.889" endtime="20221012 15:16:39.049"/>
+</iter>
+<status status="PASS" starttime="20221012 15:16:37.785" endtime="20221012 15:16:39.049"/>
+</for>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>//span[@class='shopping_cart_badge']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:39.070" level="INFO">${count} = 6</msg>
+<status status="PASS" starttime="20221012 15:16:39.050" endtime="20221012 15:16:39.070"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:16:39.072" endtime="20221012 15:16:39.072"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${count}</arg>
+<arg>${count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" starttime="20221012 15:16:39.073" endtime="20221012 15:16:39.073"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:37.767" endtime="20221012 15:16:39.073"/>
+</kw>
+<kw name="Go to cart and order" library="AddProductPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:39.075" level="INFO">Clicking element '//div[@class='shopping_cart_container']'.</msg>
+<status status="PASS" starttime="20221012 15:16:39.074" endtime="20221012 15:16:39.137"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_checkout}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:39.140" level="INFO">Clicking button '//button[@name='checkout']'.</msg>
+<status status="PASS" starttime="20221012 15:16:39.139" endtime="20221012 15:16:39.219"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${assert_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:16:39.238" level="INFO">Current page contains text 'Checkout: Your Information'.</msg>
+<status status="PASS" starttime="20221012 15:16:39.220" endtime="20221012 15:16:39.238"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:39.074" endtime="20221012 15:16:39.240"/>
+</kw>
+<kw name="Add Delivery Details" library="AddProductPage">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:16:39.244" endtime="20221012 15:16:39.245"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_firstname}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:39.246" level="INFO">Typing text 'raman' into text field '//input[@name='firstName']'.</msg>
+<status status="PASS" starttime="20221012 15:16:39.246" endtime="20221012 15:16:42.477"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_lastname}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:42.484" level="INFO">Typing text 'yadav' into text field '//input[@name='lastName']'.</msg>
+<status status="PASS" starttime="20221012 15:16:42.483" endtime="20221012 15:16:45.734"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_pincode}</arg>
+<arg>${postalCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:45.743" level="INFO">Typing text '100257' into text field '//input[@name='postalCode']'.</msg>
+<status status="PASS" starttime="20221012 15:16:45.740" endtime="20221012 15:16:49.042"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_continue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:49.051" level="INFO">Clicking element '//input[@name='continue']'.</msg>
+<status status="PASS" starttime="20221012 15:16:49.049" endtime="20221012 15:16:51.228"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_finish}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:51.234" level="INFO">Clicking button '//button[@name='finish']'.</msg>
+<status status="PASS" starttime="20221012 15:16:51.233" endtime="20221012 15:16:56.423"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${assert_txt}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:16:58.476" level="INFO">Current page contains text 'THANK YOU FOR YOUR ORDER'.</msg>
+<status status="PASS" starttime="20221012 15:16:56.425" endtime="20221012 15:16:58.476"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_backtohome}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:16:58.482" level="INFO">Clicking button '//button[@name='back-to-products']'.</msg>
+<status status="PASS" starttime="20221012 15:16:58.480" endtime="20221012 15:17:03.672"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:39.242" endtime="20221012 15:17:03.676"/>
+</kw>
+<kw name="Logout from the website" library="LogoutPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_menu}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:03.683" level="INFO">Clicking button '//button[@id='react-burger-menu-btn']'.</msg>
+<status status="PASS" starttime="20221012 15:17:03.681" endtime="20221012 15:17:08.857"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:08.859" level="INFO">Clicking link 'Logout'.</msg>
+<status status="PASS" starttime="20221012 15:17:08.858" endtime="20221012 15:17:12.016"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:03.679" endtime="20221012 15:17:12.018"/>
+</kw>
+<kw name="Close My Browser" library="CommonPage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221012 15:17:12.022" endtime="20221012 15:17:16.106"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:12.020" endtime="20221012 15:17:16.108"/>
+</kw>
+<status status="PASS" starttime="20221012 15:16:35.656" endtime="20221012 15:17:16.110"/>
+</test>
+<status status="PASS" starttime="20221012 15:16:35.633" endtime="20221012 15:17:16.136"/>
+</suite>
+<suite id="s1-s3" name="TC3 productOrder" source="C:\Users\AnkitKumar\PycharmProjects\SauceDemoRobotFramework\TestCases\TC3_productOrder.robot">
+<test id="s1-s3-t1" name="Sorting the products and getting the values" line="12">
+<kw name="Open my Browser" library="CommonPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221012 15:17:16.195" level="INFO">Opening browser 'headlessChrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221012 15:17:16.194" endtime="20221012 15:17:22.709"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221012 15:17:22.715" endtime="20221012 15:17:23.862"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:16.194" endtime="20221012 15:17:23.864"/>
+</kw>
+<kw name="Enter Login Credentials and verfiy the page" library="LoginPage">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221012 15:17:23.868" endtime="20221012 15:17:24.885"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:24.888" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<status status="PASS" starttime="20221012 15:17:24.887" endtime="20221012 15:17:28.124"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:28.131" level="INFO">Typing password into text field '//input[@placeholder='Password']'.</msg>
+<msg timestamp="20221012 15:17:30.266" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221012 15:17:31.391" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221012 15:17:28.129" endtime="20221012 15:17:31.392"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:31.398" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20221012 15:17:31.396" endtime="20221012 15:17:33.624"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sauce Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:17:35.698" level="INFO">Current page contains text 'Sauce Labs'.</msg>
+<status status="PASS" starttime="20221012 15:17:33.628" endtime="20221012 15:17:35.698"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:23.866" endtime="20221012 15:17:35.699"/>
+</kw>
+<kw name="Select Products order list" library="ProductOrder">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${dropdown}</arg>
+<arg>hilo</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20221012 15:17:35.701" level="INFO">Selecting options from selection list 'class:product_sort_container' by value hilo.</msg>
+<status status="PASS" starttime="20221012 15:17:35.701" endtime="20221012 15:17:42.926"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${product_count}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221012 15:17:43.979" level="INFO">${count} = 6</msg>
+<status status="PASS" starttime="20221012 15:17:42.930" endtime="20221012 15:17:43.979"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${count}+1</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:46.087" level="INFO">${Text} = Sauce Labs Fleece Jacket</msg>
+<status status="PASS" starttime="20221012 15:17:43.986" endtime="20221012 15:17:46.087"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:17:48.148" level="INFO">Current page contains text 'Sauce Labs Fleece Jacket'.</msg>
+<status status="PASS" starttime="20221012 15:17:46.091" endtime="20221012 15:17:48.149"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:43.985" endtime="20221012 15:17:48.153"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:50.220" level="INFO">${Text} = Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20221012 15:17:48.155" endtime="20221012 15:17:50.220"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:17:52.283" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<status status="PASS" starttime="20221012 15:17:50.224" endtime="20221012 15:17:52.283"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:48.154" endtime="20221012 15:17:52.287"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:54.392" level="INFO">${Text} = Sauce Labs Bolt T-Shirt</msg>
+<status status="PASS" starttime="20221012 15:17:52.291" endtime="20221012 15:17:54.392"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:17:56.453" level="INFO">Current page contains text 'Sauce Labs Bolt T-Shirt'.</msg>
+<status status="PASS" starttime="20221012 15:17:54.397" endtime="20221012 15:17:56.454"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:52.289" endtime="20221012 15:17:56.458"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:17:58.562" level="INFO">${Text} = Test.allTheThings() T-Shirt (Red)</msg>
+<status status="PASS" starttime="20221012 15:17:56.461" endtime="20221012 15:17:58.562"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:00.628" level="INFO">Current page contains text 'Test.allTheThings() T-Shirt (Red)'.</msg>
+<status status="PASS" starttime="20221012 15:17:58.567" endtime="20221012 15:18:00.629"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:56.460" endtime="20221012 15:18:00.633"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:02.729" level="INFO">${Text} = Sauce Labs Bike Light</msg>
+<status status="PASS" starttime="20221012 15:18:00.638" endtime="20221012 15:18:02.730"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:04.790" level="INFO">Current page contains text 'Sauce Labs Bike Light'.</msg>
+<status status="PASS" starttime="20221012 15:18:02.734" endtime="20221012 15:18:04.790"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:00.636" endtime="20221012 15:18:04.794"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:06.886" level="INFO">${Text} = Sauce Labs Onesie</msg>
+<status status="PASS" starttime="20221012 15:18:04.797" endtime="20221012 15:18:06.887"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:08.965" level="INFO">Current page contains text 'Sauce Labs Onesie'.</msg>
+<status status="PASS" starttime="20221012 15:18:06.892" endtime="20221012 15:18:08.965"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:04.796" endtime="20221012 15:18:08.969"/>
+</iter>
+<status status="PASS" starttime="20221012 15:17:43.983" endtime="20221012 15:18:08.970"/>
+</for>
+<status status="PASS" starttime="20221012 15:17:35.700" endtime="20221012 15:18:08.973"/>
+</kw>
+<kw name="Select Products price list" library="ProductOrder">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${product_price_count}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221012 15:18:10.019" level="INFO">${count} = 6</msg>
+<status status="PASS" starttime="20221012 15:18:08.977" endtime="20221012 15:18:10.019"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${count}+1</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_price_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:12.114" level="INFO">${Text} = $49.99</msg>
+<status status="PASS" starttime="20221012 15:18:10.026" endtime="20221012 15:18:12.115"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:18:12.118" endtime="20221012 15:18:12.121"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:14.171" level="INFO">Current page contains text '$49.99'.</msg>
+<status status="PASS" starttime="20221012 15:18:12.123" endtime="20221012 15:18:14.172"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:10.025" endtime="20221012 15:18:14.176"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_price_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:16.266" level="INFO">${Text} = $29.99</msg>
+<status status="PASS" starttime="20221012 15:18:14.179" endtime="20221012 15:18:16.267"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:18:16.271" endtime="20221012 15:18:16.273"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:18.342" level="INFO">Current page contains text '$29.99'.</msg>
+<status status="PASS" starttime="20221012 15:18:16.275" endtime="20221012 15:18:18.342"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:14.178" endtime="20221012 15:18:18.346"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_price_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:20.457" level="INFO">${Text} = $15.99</msg>
+<status status="PASS" starttime="20221012 15:18:18.348" endtime="20221012 15:18:20.458"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:18:20.462" endtime="20221012 15:18:20.464"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:22.517" level="INFO">Current page contains text '$15.99'.</msg>
+<status status="PASS" starttime="20221012 15:18:20.466" endtime="20221012 15:18:22.517"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:18.347" endtime="20221012 15:18:22.522"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_price_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:24.612" level="INFO">${Text} = $15.99</msg>
+<status status="PASS" starttime="20221012 15:18:22.525" endtime="20221012 15:18:24.613"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:18:24.616" endtime="20221012 15:18:24.618"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:26.671" level="INFO">Current page contains text '$15.99'.</msg>
+<status status="PASS" starttime="20221012 15:18:24.620" endtime="20221012 15:18:26.671"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:22.524" endtime="20221012 15:18:26.675"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_price_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:28.768" level="INFO">${Text} = $9.99</msg>
+<status status="PASS" starttime="20221012 15:18:26.678" endtime="20221012 15:18:28.768"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:18:28.772" endtime="20221012 15:18:28.775"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:30.836" level="INFO">Current page contains text '$9.99'.</msg>
+<status status="PASS" starttime="20221012 15:18:28.776" endtime="20221012 15:18:30.836"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:26.676" endtime="20221012 15:18:30.840"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${product_price_count} [${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:32.930" level="INFO">${Text} = $7.99</msg>
+<status status="PASS" starttime="20221012 15:18:30.844" endtime="20221012 15:18:32.930"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:18:32.935" endtime="20221012 15:18:32.937"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221012 15:18:34.994" level="INFO">Current page contains text '$7.99'.</msg>
+<status status="PASS" starttime="20221012 15:18:32.938" endtime="20221012 15:18:34.994"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:30.843" endtime="20221012 15:18:34.999"/>
+</iter>
+<status status="PASS" starttime="20221012 15:18:10.023" endtime="20221012 15:18:35.000"/>
+</for>
+<status status="PASS" starttime="20221012 15:18:08.975" endtime="20221012 15:18:35.001"/>
+</kw>
+<kw name="Social Media Accounts with mulitple window handles" library="ProductOrder">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${social_media}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221012 15:18:36.048" level="INFO">${count} = 3</msg>
+<status status="PASS" starttime="20221012 15:18:35.005" endtime="20221012 15:18:36.049"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${count}+1</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:18:36.057" endtime="20221012 15:18:36.059"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${social_media} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:36.062" level="INFO">Clicking element '(//a[@rel='noreferrer']) [1]'.</msg>
+<status status="PASS" starttime="20221012 15:18:36.060" endtime="20221012 15:18:38.187"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${windowhandles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20221012 15:18:39.200" level="INFO">${windowhandles} = ['CDwindow-D5242DC344CDDA4B6E89B19851B933F5', 'CDwindow-5D99B6843C20873BE2E328E2D9A8DBD1']</msg>
+<status status="PASS" starttime="20221012 15:18:38.188" endtime="20221012 15:18:39.200"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${windowhandles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221012 15:18:39.202" endtime="20221012 15:18:48.277"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20221012 15:18:48.279" endtime="20221012 15:18:49.306"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${windowhandles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221012 15:18:49.308" endtime="20221012 15:18:51.354"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:36.056" endtime="20221012 15:18:51.356"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:18:51.358" endtime="20221012 15:18:51.359"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${social_media} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:18:51.363" level="INFO">Clicking element '(//a[@rel='noreferrer']) [2]'.</msg>
+<status status="PASS" starttime="20221012 15:18:51.361" endtime="20221012 15:18:53.513"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${windowhandles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20221012 15:18:54.541" level="INFO">${windowhandles} = ['CDwindow-D5242DC344CDDA4B6E89B19851B933F5', 'CDwindow-6A7492753D36848C904BDA7EF227D57B']</msg>
+<status status="PASS" starttime="20221012 15:18:53.515" endtime="20221012 15:18:54.542"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${windowhandles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221012 15:18:54.546" endtime="20221012 15:19:03.687"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20221012 15:19:03.690" endtime="20221012 15:19:04.727"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${windowhandles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221012 15:19:04.729" endtime="20221012 15:19:06.775"/>
+</kw>
+<status status="PASS" starttime="20221012 15:18:51.357" endtime="20221012 15:19:06.776"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221012 15:19:06.779" endtime="20221012 15:19:06.780"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${social_media} [${i}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:19:06.782" level="INFO">Clicking element '(//a[@rel='noreferrer']) [3]'.</msg>
+<status status="PASS" starttime="20221012 15:19:06.781" endtime="20221012 15:19:08.861"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${windowhandles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20221012 15:19:09.884" level="INFO">${windowhandles} = ['CDwindow-D5242DC344CDDA4B6E89B19851B933F5', 'CDwindow-D167168A8A7ABAD51EFEA4193E45BE94']</msg>
+<status status="PASS" starttime="20221012 15:19:08.865" endtime="20221012 15:19:09.884"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${windowhandles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221012 15:19:09.885" endtime="20221012 15:19:19.019"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20221012 15:19:19.021" endtime="20221012 15:19:20.057"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${windowhandles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221012 15:19:20.058" endtime="20221012 15:19:22.082"/>
+</kw>
+<status status="PASS" starttime="20221012 15:19:06.778" endtime="20221012 15:19:22.083"/>
+</iter>
+<status status="PASS" starttime="20221012 15:18:36.053" endtime="20221012 15:19:22.084"/>
+</for>
+<status status="PASS" starttime="20221012 15:18:35.004" endtime="20221012 15:19:22.086"/>
+</kw>
+<kw name="verifying Website Privacy Policy Text" library="ProductOrder">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${txt_privacy}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221012 15:19:24.189" level="INFO">${Text} = © 2022 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy</msg>
+<status status="PASS" starttime="20221012 15:19:22.090" endtime="20221012 15:19:24.189"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221012 15:19:24.193" endtime="20221012 15:19:24.197"/>
+</kw>
+<status status="PASS" starttime="20221012 15:19:22.088" endtime="20221012 15:19:24.199"/>
+</kw>
+<kw name="Logout from the website" library="LogoutPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_menu}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 15:19:24.204" level="INFO">Clicking button '//button[@id='react-burger-menu-btn']'.</msg>
+<status status="PASS" starttime="20221012 15:19:24.202" endtime="20221012 15:19:29.416"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221012 15:19:29.422" level="INFO">Clicking link 'Logout'.</msg>
+<status status="PASS" starttime="20221012 15:19:29.420" endtime="20221012 15:19:32.581"/>
+</kw>
+<status status="PASS" starttime="20221012 15:19:24.201" endtime="20221012 15:19:32.585"/>
+</kw>
+<kw name="Close My Browser" library="CommonPage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221012 15:19:32.590" endtime="20221012 15:19:35.668"/>
+</kw>
+<status status="PASS" starttime="20221012 15:19:32.588" endtime="20221012 15:19:35.670"/>
+</kw>
+<status status="PASS" starttime="20221012 15:17:16.193" endtime="20221012 15:19:35.672"/>
+</test>
+<status status="PASS" starttime="20221012 15:17:16.162" endtime="20221012 15:19:35.697"/>
+</suite>
+<status status="PASS" starttime="20221012 15:16:30.812" endtime="20221012 15:19:35.714"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC1 LoginPage">TestCases.TC1 LoginPage</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="TC2 AddProductPage">TestCases.TC2 AddProductPage</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="TC3 productOrder">TestCases.TC3 productOrder</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

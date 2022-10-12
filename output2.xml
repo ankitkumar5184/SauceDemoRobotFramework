@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220930 13:20:00.104" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\AnkitKumar\PycharmProjects\SauceDemoRobotFramework\TestCases">
+<suite id="s1-s1" name="TC1 LoginPage" source="C:\Users\AnkitKumar\PycharmProjects\SauceDemoRobotFramework\TestCases\TC1_LoginPage.robot">
+<test id="s1-s1-t1" name="Login in the website" line="11">
+<kw name="Open my Browser" library="CommonPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220930 13:20:00.371" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20220930 13:20:00.370" endtime="20220930 13:20:02.221"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220930 13:20:02.222" endtime="20220930 13:20:02.411"/>
+</kw>
+<status status="PASS" starttime="20220930 13:20:00.370" endtime="20220930 13:20:02.411"/>
+</kw>
+<kw name="Enter Login Credentials and verfiy the page" library="LoginPage">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220930 13:20:02.423" endtime="20220930 13:20:02.436"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:02.437" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<status status="PASS" starttime="20220930 13:20:02.436" endtime="20220930 13:20:02.686"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:02.687" level="INFO">Typing password into text field '//input[@placeholder='Password']'.</msg>
+<msg timestamp="20220930 13:20:02.742" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220930 13:20:02.819" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220930 13:20:02.686" endtime="20220930 13:20:02.820"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:02.821" level="INFO">Clicking element '//input[@type='submit''.</msg>
+<msg timestamp="20220930 13:20:03.020" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220930 13:20:03.020" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //input[@type='submit' because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//input[@type='submit'' is not a valid XPath expression.
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x011AC0A3+2212003]
+	Ordinal0 [0x01142CC1+1780929]
+	Ordinal0 [0x0105465D+804445]
+	Ordinal0 [0x01057124+815396]
+	Ordinal0 [0x01056FE2+815074]
+	Ordinal0 [0x01057270+815728]
+	Ordinal0 [0x0108319F+995743]
+	Ordinal0 [0x0108363B+996923]
+	Ordinal0 [0x010B13BC+1184700]
+	Ordinal0 [0x0109EC64+1109092]
+	Ordinal0 [0x010AF5B2+1177010]
+	Ordinal0 [0x0109EA36+1108534]
+	Ordinal0 [0x010783C9+951241]
+	Ordinal0 [0x01079396+955286]
+	GetHandleVerifier [0x01459CE2+2746722]
+	GetHandleVerifier [0x0144A234+2682548]
+	GetHandleVerifier [0x0123B34A+524234]
+	GetHandleVerifier [0x01239B60+518112]
+	Ordinal0 [0x01149FBC+1810364]
+	Ordinal0 [0x0114EA28+1829416]
+	Ordinal0 [0x0114EB15+1829653]
+	Ordinal0 [0x01158744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+</msg>
+<status status="FAIL" starttime="20220930 13:20:02.820" endtime="20220930 13:20:03.024"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sauce Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20220930 13:20:03.024" endtime="20220930 13:20:03.025"/>
+</kw>
+<status status="FAIL" starttime="20220930 13:20:02.422" endtime="20220930 13:20:03.025"/>
+</kw>
+<kw name="Logout from the website" library="LogoutPage">
+<status status="NOT RUN" starttime="20220930 13:20:03.026" endtime="20220930 13:20:03.026"/>
+</kw>
+<kw name="Close My Browser" library="CommonPage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220930 13:20:03.027" endtime="20220930 13:20:05.328"/>
+</kw>
+<status status="PASS" starttime="20220930 13:20:03.027" endtime="20220930 13:20:05.328"/>
+</kw>
+<status status="FAIL" starttime="20220930 13:20:00.369" endtime="20220930 13:20:05.330">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //input[@type='submit' because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//input[@type='submit'' is not a valid XPath expression.
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x011AC0A3+2212003]
+	Ordinal0 [0x01142CC1+1780929]
+	Ordinal0 [0x0105465D+804445]
+	Ordinal0 [0x01057124+815396]
+	Ordinal0 [0x01056FE2+815074]
+	Ordinal0 [0x01057270+815728]
+	Ordinal0 [0x0108319F+995743]
+	Ordinal0 [0x0108363B+996923]
+	Ordinal0 [0x010B13BC+1184700]
+	Ordinal0 [0x0109EC64+1109092]
+	Ordinal0 [0x010AF5B2+1177010]
+	Ordinal0 [0x0109EA36+1108534]
+	Ordinal0 [0x010783C9+951241]
+	Ordinal0 [0x01079396+955286]
+	GetHandleVerifier [0x01459CE2+2746722]
+	GetHandleVerifier [0x0144A234+2682548]
+	GetHandleVerifier [0x0123B34A+524234]
+	GetHandleVerifier [0x01239B60+518112]
+	Ordinal0 [0x01149FBC+1810364]
+	Ordinal0 [0x0114EA28+1829416]
+	Ordinal0 [0x0114EB15+1829653]
+	Ordinal0 [0x01158744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220930 13:20:00.133" endtime="20220930 13:20:05.342"/>
+</suite>
+<suite id="s1-s2" name="TC2 AddProductPage" source="C:\Users\AnkitKumar\PycharmProjects\SauceDemoRobotFramework\TestCases\TC2_AddProductPage.robot">
+<test id="s1-s2-t1" name="Add Product to Cart" line="12">
+<kw name="Open my Browser" library="CommonPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220930 13:20:05.382" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20220930 13:20:05.382" endtime="20220930 13:20:07.264"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220930 13:20:07.264" endtime="20220930 13:20:07.403"/>
+</kw>
+<status status="PASS" starttime="20220930 13:20:05.381" endtime="20220930 13:20:07.403"/>
+</kw>
+<kw name="Enter Login Credentials and verfiy the page" library="LoginPage">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220930 13:20:07.405" endtime="20220930 13:20:07.406"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:07.407" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<status status="PASS" starttime="20220930 13:20:07.407" endtime="20220930 13:20:07.578"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:07.579" level="INFO">Typing password into text field '//input[@placeholder='Password']'.</msg>
+<msg timestamp="20220930 13:20:07.612" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220930 13:20:07.665" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220930 13:20:07.578" endtime="20220930 13:20:07.665"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:07.666" level="INFO">Clicking element '//input[@type='submit''.</msg>
+<msg timestamp="20220930 13:20:07.815" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220930 13:20:07.815" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //input[@type='submit' because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//input[@type='submit'' is not a valid XPath expression.
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x011AC0A3+2212003]
+	Ordinal0 [0x01142CC1+1780929]
+	Ordinal0 [0x0105465D+804445]
+	Ordinal0 [0x01057124+815396]
+	Ordinal0 [0x01056FE2+815074]
+	Ordinal0 [0x01057270+815728]
+	Ordinal0 [0x0108319F+995743]
+	Ordinal0 [0x0108363B+996923]
+	Ordinal0 [0x010B13BC+1184700]
+	Ordinal0 [0x0109EC64+1109092]
+	Ordinal0 [0x010AF5B2+1177010]
+	Ordinal0 [0x0109EA36+1108534]
+	Ordinal0 [0x010783C9+951241]
+	Ordinal0 [0x01079396+955286]
+	GetHandleVerifier [0x01459CE2+2746722]
+	GetHandleVerifier [0x0144A234+2682548]
+	GetHandleVerifier [0x0123B34A+524234]
+	GetHandleVerifier [0x01239B60+518112]
+	Ordinal0 [0x01149FBC+1810364]
+	Ordinal0 [0x0114EA28+1829416]
+	Ordinal0 [0x0114EB15+1829653]
+	Ordinal0 [0x01158744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+</msg>
+<status status="FAIL" starttime="20220930 13:20:07.665" endtime="20220930 13:20:07.816"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sauce Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20220930 13:20:07.816" endtime="20220930 13:20:07.816"/>
+</kw>
+<status status="FAIL" starttime="20220930 13:20:07.404" endtime="20220930 13:20:07.817"/>
+</kw>
+<kw name="Add product to the cart" library="AddProductPage">
+<status status="NOT RUN" starttime="20220930 13:20:07.817" endtime="20220930 13:20:07.817"/>
+</kw>
+<kw name="Go to cart and order" library="AddProductPage">
+<status status="NOT RUN" starttime="20220930 13:20:07.817" endtime="20220930 13:20:07.817"/>
+</kw>
+<kw name="Add Delivery Details" library="AddProductPage">
+<status status="NOT RUN" starttime="20220930 13:20:07.818" endtime="20220930 13:20:07.818"/>
+</kw>
+<kw name="Logout from the website" library="LogoutPage">
+<status status="NOT RUN" starttime="20220930 13:20:07.818" endtime="20220930 13:20:07.818"/>
+</kw>
+<kw name="Close My Browser" library="CommonPage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220930 13:20:07.819" endtime="20220930 13:20:10.009"/>
+</kw>
+<status status="PASS" starttime="20220930 13:20:07.818" endtime="20220930 13:20:10.010"/>
+</kw>
+<status status="FAIL" starttime="20220930 13:20:05.380" endtime="20220930 13:20:10.011">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //input[@type='submit' because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//input[@type='submit'' is not a valid XPath expression.
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x011AC0A3+2212003]
+	Ordinal0 [0x01142CC1+1780929]
+	Ordinal0 [0x0105465D+804445]
+	Ordinal0 [0x01057124+815396]
+	Ordinal0 [0x01056FE2+815074]
+	Ordinal0 [0x01057270+815728]
+	Ordinal0 [0x0108319F+995743]
+	Ordinal0 [0x0108363B+996923]
+	Ordinal0 [0x010B13BC+1184700]
+	Ordinal0 [0x0109EC64+1109092]
+	Ordinal0 [0x010AF5B2+1177010]
+	Ordinal0 [0x0109EA36+1108534]
+	Ordinal0 [0x010783C9+951241]
+	Ordinal0 [0x01079396+955286]
+	GetHandleVerifier [0x01459CE2+2746722]
+	GetHandleVerifier [0x0144A234+2682548]
+	GetHandleVerifier [0x0123B34A+524234]
+	GetHandleVerifier [0x01239B60+518112]
+	Ordinal0 [0x01149FBC+1810364]
+	Ordinal0 [0x0114EA28+1829416]
+	Ordinal0 [0x0114EB15+1829653]
+	Ordinal0 [0x01158744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220930 13:20:05.348" endtime="20220930 13:20:10.021"/>
+</suite>
+<suite id="s1-s3" name="TC3 productOrder" source="C:\Users\AnkitKumar\PycharmProjects\SauceDemoRobotFramework\TestCases\TC3_productOrder.robot">
+<test id="s1-s3-t1" name="Sorting the products and getting the values" line="12">
+<kw name="Open my Browser" library="CommonPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220930 13:20:10.071" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20220930 13:20:10.070" endtime="20220930 13:20:11.827"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220930 13:20:11.827" endtime="20220930 13:20:11.966"/>
+</kw>
+<status status="PASS" starttime="20220930 13:20:10.070" endtime="20220930 13:20:11.967"/>
+</kw>
+<kw name="Enter Login Credentials and verfiy the page" library="LoginPage">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220930 13:20:11.967" endtime="20220930 13:20:11.969"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:11.969" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder='Username']'.</msg>
+<status status="PASS" starttime="20220930 13:20:11.969" endtime="20220930 13:20:12.124"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:12.125" level="INFO">Typing password into text field '//input[@placeholder='Password']'.</msg>
+<msg timestamp="20220930 13:20:12.166" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220930 13:20:12.234" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220930 13:20:12.124" endtime="20220930 13:20:12.234"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220930 13:20:12.235" level="INFO">Clicking element '//input[@type='submit''.</msg>
+<msg timestamp="20220930 13:20:12.406" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220930 13:20:12.407" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //input[@type='submit' because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//input[@type='submit'' is not a valid XPath expression.
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x011AC0A3+2212003]
+	Ordinal0 [0x01142CC1+1780929]
+	Ordinal0 [0x0105465D+804445]
+	Ordinal0 [0x01057124+815396]
+	Ordinal0 [0x01056FE2+815074]
+	Ordinal0 [0x01057270+815728]
+	Ordinal0 [0x0108319F+995743]
+	Ordinal0 [0x0108363B+996923]
+	Ordinal0 [0x010B13BC+1184700]
+	Ordinal0 [0x0109EC64+1109092]
+	Ordinal0 [0x010AF5B2+1177010]
+	Ordinal0 [0x0109EA36+1108534]
+	Ordinal0 [0x010783C9+951241]
+	Ordinal0 [0x01079396+955286]
+	GetHandleVerifier [0x01459CE2+2746722]
+	GetHandleVerifier [0x0144A234+2682548]
+	GetHandleVerifier [0x0123B34A+524234]
+	GetHandleVerifier [0x01239B60+518112]
+	Ordinal0 [0x01149FBC+1810364]
+	Ordinal0 [0x0114EA28+1829416]
+	Ordinal0 [0x0114EB15+1829653]
+	Ordinal0 [0x01158744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+</msg>
+<status status="FAIL" starttime="20220930 13:20:12.234" endtime="20220930 13:20:12.407"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sauce Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20220930 13:20:12.408" endtime="20220930 13:20:12.408"/>
+</kw>
+<status status="FAIL" starttime="20220930 13:20:11.967" endtime="20220930 13:20:12.408"/>
+</kw>
+<kw name="Select Products order list" library="ProductOrder">
+<status status="NOT RUN" starttime="20220930 13:20:12.409" endtime="20220930 13:20:12.409"/>
+</kw>
+<kw name="Select Products price list" library="ProductOrder">
+<status status="NOT RUN" starttime="20220930 13:20:12.409" endtime="20220930 13:20:12.409"/>
+</kw>
+<kw name="Social Media Accounts with mulitple window handles" library="ProductOrder">
+<status status="NOT RUN" starttime="20220930 13:20:12.409" endtime="20220930 13:20:12.409"/>
+</kw>
+<kw name="verifying Website Privacy Policy Text" library="ProductOrder">
+<status status="NOT RUN" starttime="20220930 13:20:12.410" endtime="20220930 13:20:12.410"/>
+</kw>
+<kw name="Logout from the website" library="LogoutPage">
+<status status="NOT RUN" starttime="20220930 13:20:12.410" endtime="20220930 13:20:12.410"/>
+</kw>
+<kw name="Close My Browser" library="CommonPage" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220930 13:20:12.411" endtime="20220930 13:20:14.605"/>
+</kw>
+<status status="PASS" starttime="20220930 13:20:12.410" endtime="20220930 13:20:14.606"/>
+</kw>
+<status status="FAIL" starttime="20220930 13:20:10.069" endtime="20220930 13:20:14.607">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //input[@type='submit' because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//input[@type='submit'' is not a valid XPath expression.
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x011AC0A3+2212003]
+	Ordinal0 [0x01142CC1+1780929]
+	Ordinal0 [0x0105465D+804445]
+	Ordinal0 [0x01057124+815396]
+	Ordinal0 [0x01056FE2+815074]
+	Ordinal0 [0x01057270+815728]
+	Ordinal0 [0x0108319F+995743]
+	Ordinal0 [0x0108363B+996923]
+	Ordinal0 [0x010B13BC+1184700]
+	Ordinal0 [0x0109EC64+1109092]
+	Ordinal0 [0x010AF5B2+1177010]
+	Ordinal0 [0x0109EA36+1108534]
+	Ordinal0 [0x010783C9+951241]
+	Ordinal0 [0x01079396+955286]
+	GetHandleVerifier [0x01459CE2+2746722]
+	GetHandleVerifier [0x0144A234+2682548]
+	GetHandleVerifier [0x0123B34A+524234]
+	GetHandleVerifier [0x01239B60+518112]
+	Ordinal0 [0x01149FBC+1810364]
+	Ordinal0 [0x0114EA28+1829416]
+	Ordinal0 [0x0114EB15+1829653]
+	Ordinal0 [0x01158744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220930 13:20:10.027" endtime="20220930 13:20:14.619"/>
+</suite>
+<status status="FAIL" starttime="20220930 13:20:00.107" endtime="20220930 13:20:14.628"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="TC1 LoginPage">TestCases.TC1 LoginPage</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="TC2 AddProductPage">TestCases.TC2 AddProductPage</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="TC3 productOrder">TestCases.TC3 productOrder</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

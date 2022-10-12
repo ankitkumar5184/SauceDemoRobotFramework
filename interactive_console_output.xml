@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221006 18:34:44.567" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\AnkitKumar\.vscode\extensions\robocorp.robotframework-lsp-1.2.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Enter Login Credentials and verfiy the page" library="LoginPage">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221006 18:35:14.829" endtime="20221006 18:35:14.830"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221006 18:35:14.834" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20221006 18:35:14.830" endtime="20221006 18:35:14.838"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221006 18:35:14.838" endtime="20221006 18:35:14.838"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221006 18:35:14.839" endtime="20221006 18:35:14.839"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sauce Labs</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20221006 18:35:14.839" endtime="20221006 18:35:14.839"/>
+</kw>
+<status status="FAIL" starttime="20221006 18:35:14.828" endtime="20221006 18:35:14.840"/>
+</kw>
+<kw name="Logout from the website" library="LogoutPage">
+<status status="NOT RUN" starttime="20221006 18:35:14.840" endtime="20221006 18:35:14.840"/>
+</kw>
+<status status="PASS" starttime="20221006 18:34:44.598" endtime="20221006 18:38:15.910"/>
+</kw>
+<status status="PASS" starttime="20221006 18:34:44.598" endtime="20221006 18:38:15.910"/>
+</test>
+<status status="PASS" starttime="20221006 18:34:44.569" endtime="20221006 18:38:15.912"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
