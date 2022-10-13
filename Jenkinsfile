@@ -32,6 +32,9 @@ pipeline {
 
 		        }
 	  	}
+	   success {  
+             echo 'This will run only if successful'  
+         }  
 	failure {
         mail to: 'ankit.kumar@infostride.com',
              subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
