@@ -13,9 +13,23 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            archive (include: 'Results2/*.html')
-        }
+   post {
+        	always {
+		        script {
+		          step(
+			            [
+// 			              $class              : 'RobotPublisher',
+			              outputPath          : 'Results2',
+			              outputFileName      : '**/output.xml',
+			              reportFileName      : '**/report.html',
+			              logFileName         : '**/log.html',
+			              disableArchiveOutput: false,
+			              passThreshold       : 50,
+			              unstableThreshold   : 40,
+			              otherFiles          : "**/*.png,**/*.jpg",
+			            ]
+		          	)
+		        }
+	  		}		
     }
 }
