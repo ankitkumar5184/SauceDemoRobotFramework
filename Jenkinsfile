@@ -12,13 +12,12 @@ pipeline {
             }
         }
 	    stage('Email') {
-            steps{
 		    failure{
 			    mail to: 'ankit.kumar@infostride.com',
-             		   subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                     body: "Build number ${env.BUILD_NUMBER} has been failed. Track the issues by visiting the url  ${env.BUILD_URL}"
+             		    subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                     	    body: "Build number ${env.BUILD_NUMBER} has been failed. Track the issues by visiting the url  ${env.BUILD_URL}"
             }
-	    }
+	    
 	    
     }
    post {
