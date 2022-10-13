@@ -39,7 +39,7 @@ pipeline {
         mail to: 'ankit.kumar@infostride.com',
              subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
              body: "Build number ${env.BUILD_NUMBER} has been failed. The You can check with by visting the url i.e.   ${env.BUILD_URL}",
-	          " Note: This mail is for testing purpose only."
+	          
     }
 }
    	 
