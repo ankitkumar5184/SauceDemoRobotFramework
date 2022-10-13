@@ -10,17 +10,17 @@ pipeline {
         }
         stage('install') {
             steps {
-                bat "mvn install -f SauceDemoRobotFramework"
+                bat "pip install -f SauceDemoRobotFramework"
             }
         }
         stage('test') {
             steps {
-                bat "mvn test -f SauceDemoRobotFramework"
+                bat "pip test -f SauceDemoRobotFramework"
             }
         }
         stage('package') {
             steps {
-                bat "mvn package -f SauceDemoRobotFramework"
+                bat "pip package -f SauceDemoRobotFramework"
             }
         }
     }
