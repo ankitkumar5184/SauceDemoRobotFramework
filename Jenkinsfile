@@ -18,7 +18,7 @@ pipeline {
 		        script {
 		          step(
 			            [
-// 			              $class              : 'RobotPublisher',
+			              $class              : 'RobotPublisher',
 			              outputPath          : 'Results2',
 			              outputFileName      : '**/output.xml',
 			              reportFileName      : '**/report.html',
