@@ -1,27 +1,21 @@
 pipeline {
     agent any
     stages {
-        stage('git repo & clean') {
+        stage('Checkout') {
             steps {
-//                bat "rmdir  /s /q SauceDemoRobotFramework"
-                bat "git clone https://github.com/ankitkumar5184/SauceDemoRobotFramework.git"
-                bat "mvn clean -f SauceDemoRobotFramework"
+                git branch: "master", url:'https://github.com/johan974/robot-framework-demo1.git'
             }
         }
-        stage('install') {
-            steps {
-                bat "pip install -f SauceDemoRobotFramework"
+        stage('Test') {
+            steps{
+                sh 'docker run -v ${PWD}/reports:/opt/robotframework/reports:Z -v ${PWD}/Tests:/opt/robotframework/tests:Z \
+                            -e BROWSER=chrome ppodgorsek/robot-framework:latest'
             }
         }
-        stage('test') {
-            steps {
-                bat "pip test -f SauceDemoRobotFramework"
-            }
-        }
-        stage('package') {
-            steps {
-                bat "pip package -f SauceDemoRobotFramework"
-            }
+    }
+    post {
+        always {
+            archive (includes: 'reports/*.html')
         }
     }
 }
