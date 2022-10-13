@@ -11,6 +11,7 @@ pipeline {
                 bat 'run.bat'
             }
         }
+    }
    post {
         	always {
 		        script {
