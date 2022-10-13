@@ -15,7 +15,7 @@ pipeline {
     }
     post {
         always {
-            archive (includes: 'reports/*.html')
+            archive (includes: 'Results2/*.html')
         }
     }
 }
