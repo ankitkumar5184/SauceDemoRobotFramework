@@ -29,7 +29,18 @@ pipeline {
 			              otherFiles          : "**/*.png,**/*.jpg",
 			            ]
 		          	)
+
 		        }
 	  		}		
     }
+ post {
+ always {
+  script {
+    if (currentBuild.currentResult == 'FAILURE') {
+      step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: "ankit.kumar@infostride.com", sendToIndividuals: true])
+    }
+  }
 }
+}
+
+
