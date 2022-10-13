@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git repo & clean') {
             steps {
-               bat "rmdir  /s /q SauceDemoRobotFramework"
+//                bat "rmdir  /s /q SauceDemoRobotFramework"
                 bat "git clone https://github.com/ankitkumar5184/SauceDemoRobotFramework.git"
                 bat "mvn clean -f SauceDemoRobotFramework"
             }
