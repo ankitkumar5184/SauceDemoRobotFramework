@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps{
-                sh 'python3 -m robot.run TestCases'
+                bat 'run.bat'
 
             }
         }
