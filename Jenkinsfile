@@ -32,13 +32,12 @@ pipeline {
 
 		        }
 	  	}
-	fauilure {
-  		script {
-    			if (currentBuild.currentResult == 'FAILURE') {
-      						step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: "ankit.kumar@infostride.com", sendToIndividuals: true])
-   						 }
-  				}
-			}
+	failure {
+        mail to: 'ankit.kumar@infostride.com',
+             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Something is wrong with ${env.BUILD_URL}"
+    }
+}
    	 
 
 }
