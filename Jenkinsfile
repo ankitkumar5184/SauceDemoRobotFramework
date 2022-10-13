@@ -33,17 +33,14 @@ pipeline {
 		        }
 	  	}
 	   success {  
-             echo 'This will run only if successful'  
+             echo 'Build successfully executed'
          }  
-	failure {
+    failure {
         mail to: 'ankit.kumar@infostride.com',
              subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
              body: "Build number ${env.BUILD_NUMBER} has been failed. Track the issues by visiting the url  ${env.BUILD_URL}"
-	          
+	    }
     }
-}
-   	 
-
 }
 	
 
