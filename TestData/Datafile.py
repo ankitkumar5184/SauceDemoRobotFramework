@@ -1,6 +1,6 @@
 site = "https://www.saucedemo.com/"
 browser = "headlessChrome"
-username = "standard_user"
+username = "standard_use"
 password = "secret_sauce"
 firstName = "raman"
 lastName = "yadav"
