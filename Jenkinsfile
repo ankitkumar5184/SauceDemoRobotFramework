@@ -14,7 +14,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts (includes: 'Results2/*.html')
+            archiveArtifacts (exclude: 'Results2/*.html')
         }
     }
 }
