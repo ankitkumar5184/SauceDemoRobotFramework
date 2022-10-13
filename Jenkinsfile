@@ -9,12 +9,13 @@ pipeline {
         stage('Test') {
             steps{
                 bat 'run.bat'
+                
             }
         }
     }
     post {
         always {
-            archiveArtifacts (exclude: 'Results2/*.html')
+            archive (include: 'Results2/*.html')
         }
     }
 }
