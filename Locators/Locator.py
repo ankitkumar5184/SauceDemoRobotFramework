@@ -27,7 +27,7 @@ txt_lastname = "//input[@name='lastName']"
 txt_pincode = "//input[@name='postalCode']"
 btn_continue = "//input[@name='continue']"
 btn_finish = "//button[@name='finish']"
-assert_txt = "THANK YOU FOR YOUR ORDER"
+assert_txt = "THANK YOU FOR YOUR ORDER!"
 btn_backtohome = "//button[@name='back-to-products']"
 
 

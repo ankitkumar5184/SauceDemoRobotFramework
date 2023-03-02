@@ -1,5 +1,5 @@
 site = "https://www.saucedemo.com/"
-browser = "headlessChrome"
+browser = "Chrome"
 username = "standard_user"
 password = "secret_sauce"
 firstName = "raman"

@@ -16,9 +16,5 @@ Enter Login Credentials and verfiy the page
     Input Text    ${txt_username}    ${username}
     Input Password    ${txt_password}    ${password}
     Click Element    ${btn_login}
-    # ${count}    Get Element Count    //h3[@data-test="error"]  
-    # Run Keyword If    ${count}==0    Click Element    ${btn_login}    
-    # ...    ELSE IF    ${count}>= 1    Click Element    ${btn_login}
-    # Page Should Contain       Epic sadface: Username and password do not match any user in this service
-    
+
     Page Should Contain    Sauce Labs

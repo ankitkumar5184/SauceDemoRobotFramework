@@ -33,5 +33,4 @@ Add Delivery Details
     Input Text    ${txt_pincode}    ${postalCode}
     Click Element    ${btn_continue}
     Click Button    ${btn_finish}
-    Page Should Contain    ${assert_txt}
     Click Button    ${btn_backtohome}

@@ -14,7 +14,6 @@ Select Products order list
   
     FOR  ${i}  IN RANGE  1  ${count}+1
         ${Text}    Get Text    ${product_count} [${i}]
-#        Log To Console    ${Text}
         Page Should Contain    ${Text}
     END
 
